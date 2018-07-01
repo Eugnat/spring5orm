@@ -25,10 +25,18 @@ public class SpringMain {
 //
 //            bookDAO.addBook(book);
 
-            List<HibBook> list = bookDAO.getBooks();
+//            List<HibBook> list = bookDAO.getBooks();
+//
+//            for (HibBook book : list)
+//                System.out.println(book);
 
-            for (HibBook book : list)
-                System.out.println(book);
+            HibBook book = bookDAO.getBookByTitle("title one");
+            System.out.println(book);
+
+            bookDAO.deleteBook(book);
+
+//            book = bookDAO.getBookByAuthor("author two");
+//            System.out.println(book);
 
             context.close();
         }
